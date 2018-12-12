@@ -25,36 +25,41 @@ csv_folder = 'C:\\Users\\sivas\\Python Projects\\DevopsData\\data\\'
 #Pull all the data for the required stocks
 tcs_raw = quandl.get('NSE/TCS', start_date = from_date, end_date=to_date)
 tcs = tcs_raw.iloc[:,[0,1,2,4,5]]
-tcs.columns = ['Open', 'High', 'Low', 'Close','Volume']
 tcs['Stock'] = 'TCS'
+tcs.columns = ['Open', 'High', 'Low', 'Close','Volume','Stock']
+tcs=tcs[['Stock','Open', 'High', 'Low', 'Close','Volume']]
 tcs.to_csv(csv_folder+"tcs.csv")
 
 #TATAMOTORS
 tatamotors_raw = quandl.get('NSE/TATAMOTORS', start_date = from_date, end_date=to_date)
 tatamotors = tatamotors_raw.iloc[:,[0,1,2,4,5]]
-tatamotors.columns = ['Open', 'High', 'Low', 'Close','Volume']
 tatamotors['Stock'] = 'TATAMOTORS'
+tatamotors.columns = ['Open', 'High', 'Low', 'Close','Volume','Stock']
+tatamotors=tatamotors[['Stock','Open', 'High', 'Low', 'Close','Volume']]
 tatamotors.to_csv(csv_folder+"tatamotors.csv")
 
 #TATASTEEL
 tatasteel_raw = quandl.get('NSE/TATASTEEL', start_date = from_date, end_date=to_date)
 tatasteel = tatasteel_raw.iloc[:,[0,1,2,4,5]]
-tatasteel.columns = ['Open', 'High', 'Low', 'Close','Volume']
 tatasteel['Stock'] = 'TATASTEEL'
+tatasteel.columns = ['Open', 'High', 'Low', 'Close','Volume','Stock']
+tatasteel=tatasteel[['Stock','Open', 'High', 'Low', 'Close','Volume']]
 tatasteel.to_csv(csv_folder+"tatasteel.csv")
 
 #TATACOFFEE
 tatacoffee_raw = quandl.get('NSE/TATACOFFEE', start_date = from_date, end_date=to_date)
 tatacoffee = tatacoffee_raw.iloc[:,[0,1,2,4,5]]
-tatacoffee.columns = ['Open', 'High', 'Low', 'Close','Volume']
 tatacoffee['Stock'] = 'TATACOFFEE'
+tatacoffee.columns = ['Open', 'High', 'Low', 'Close','Volume','Stock']
+tatacoffee=tatacoffee[['Stock','Open', 'High', 'Low', 'Close','Volume']]
 tatacoffee.to_csv(csv_folder+"tatacoffee.csv")
 
 #TITAN
 titan_raw = quandl.get('NSE/TITAN', start_date = from_date, end_date=to_date)
 titan = titan_raw.iloc[:,[0,1,2,4,5]]
-titan.columns = ['Open', 'High', 'Low', 'Close','Volume']
 titan['Stock'] = 'TITAN'
+titan.columns = ['Open', 'High', 'Low', 'Close','Volume','Stock']
+titan=titan[['Stock','Open', 'High', 'Low', 'Close','Volume']]
 titan.to_csv(csv_folder+"titan.csv")
 
 #Merge all to one
